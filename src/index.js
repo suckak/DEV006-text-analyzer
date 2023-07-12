@@ -1,7 +1,7 @@
 import analyzer from "./analyzer.js";
 
 const resetButton = document.getElementById("reset-button");
-const textArea = document.getElementsByName("user-input")[0];
+const textArea = document.querySelector("[name=user-input]");
 const statsLi = document.getElementsByTagName("li");
 
 function displayStat(index, title, value) {
