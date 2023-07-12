@@ -1,10 +1,12 @@
 const regex = /[\W_]/g;
 
 function getNums(string) {
+  let nums = [];
+
   if (!string.trim().length) {
-    return [];
+    return nums;
   }
-  const nums = string
+  nums = string
     .trim()
     .split(" ")
     .map((x) => x.replace(" ", ""))
@@ -57,9 +59,13 @@ const analyzer = {
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-    return getNums(text).reduce(function (acc, current) {
-      return acc + current;
-    }, 0);
+    const nums = getNums(text);
+    let suma = 0;
+    for (let index = 0; index < nums.length; index++) {
+      const num = nums[index];
+      suma += num;
+    }
+    return suma;
   },
 };
 

@@ -2,7 +2,15 @@ body {
   text-align: center;
 }
 
-ul {
+header {
+  margin-bottom: 1em;
+}
+
+footer {
+  margin-top: 1em;
+}
+
+.stats {
   align-content: flex-start;
   display: flex;
   flex-wrap: wrap;
@@ -10,14 +18,14 @@ ul {
   width: 650px;
 }
 
-li {
+.stat {
   list-style: none;
   margin: 4px 0;
   text-align: left;
   width: 33%;
 }
 
-textarea {
+textarea[name="user-input"] {
   font-size: 1.5em;
   padding: 0.5em;
   margin-top: 2em;
@@ -25,7 +33,7 @@ textarea {
   width: 90vw;
 }
 
-button {
+#reset-button {
   background-color: #009b77;
   border-radius: 6px;
   color: white;
@@ -36,6 +44,6 @@ button {
   padding: 0.3em 0.6em;
 }
 
-button:hover {
+#reset-button:hover {
   background-color: #5b5ea6;
 }
